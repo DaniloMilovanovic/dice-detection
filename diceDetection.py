@@ -54,19 +54,21 @@ for i in range(1, NUM_SAMPLES + 1):
     figura, axes = plt.subplots(figsize=(10, 10))
 
     for i in range(len(tackice)):
-        Drawing_colored_circle = plt.Circle((tackice[i, 1], tackice[i, 0]), tackice[i, 2], fill=True, color='magenta')
-        axes.add_artist(Drawing_colored_circle)
+        Drawing_colored_circle0 = plt.Circle((tackice[i, 1], tackice[i, 0]), tackice[i, 2], fill=True, color='red')
+        Drawing_colored_circle1 = plt.Circle((tackice[i, 1], tackice[i, 0]), tackice[i, 2] / 2, fill=True, color='black')
+        axes.add_artist(Drawing_colored_circle0)
+        axes.add_artist(Drawing_colored_circle1)
 
     for i in range(len(centri_kockica)):
         Drawing_colored_circle2 = plt.Circle((centri_kockica[i, 1], centri_kockica[i, 0]), 35, fill=False, color='red')
         axes.add_artist(Drawing_colored_circle2)
 
     axes.set_aspect(1)
-    axes.add_artist(Drawing_colored_circle)
-    axes.add_artist(Drawing_colored_circle2)
+    #axes.add_artist(Drawing_colored_circle0)
+    #axes.add_artist(Drawing_colored_circle2)
 
     for i in range(len(centri_kockica)):
-        plt.text(20, 50 + i * 30, "kockica {0}:  {1}".format(i + 1, broj_na_kockici[i]), fontsize=20)
+        plt.text(20, 50 + i * 40, "kockica {0}:  {1}".format(i + 1, broj_na_kockici[i]), fontsize=20)
 
     axis('off')
     axes.imshow(slika)
