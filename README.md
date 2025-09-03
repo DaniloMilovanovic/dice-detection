@@ -20,32 +20,6 @@ This system processes images of dice and performs the following tasks:
 - **Visualization**: Displays detected dice with boundaries and annotations
 - **Batch Processing**: Handles multiple images sequentially
 
-## Installation
-
-### Prerequisites
-
-- Python 3.7+
-- pip (Python package manager)
-
-### Dependencies
-
-Install required packages:
-
-pip install matplotlib scikit-image scikit-learn numpy
-
-## Usage
-
-1. Place your dice images in the project directory named as `dices1.jpg`, `dices2.jpg`, etc.
-2. Run the main script:
-
-python dice_detection.py
-
-
-3. The script will process each image and display results with:
-   - Detected dots (red circles with black centers)
-   - Dice boundaries (blue dashed circles)
-   - Annotations showing dice values and sizes
-
 ## Algorithm Details
 
 ### Image Processing
@@ -73,6 +47,34 @@ The program generates visualizations showing:
 - Dice boundaries based on calculated sizes
 - Text annotations with dice values and dimensions
 - Console output with processed results
+
+
+## Installation
+
+### Prerequisites
+
+- Python 3.7+
+- pip (Python package manager)
+
+### Dependencies
+
+Install required packages:
+
+pip install matplotlib scikit-image scikit-learn numpy
+
+## Usage
+
+1. Place your dice images in the project directory named as `dices1.jpg`, `dices2.jpg`, etc.
+2. Run the main script:
+
+python dice_detection.py
+
+
+3. The script will process each image and display results with:
+   - Detected dots (red circles with black centers)
+   - Dice boundaries (blue dashed circles)
+   - Annotations showing dice values and sizes
+
 
 ## Limitations
 
