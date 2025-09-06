@@ -85,7 +85,7 @@ def visualize_results(image, detected_dots, dice_centers, dice_values, dice_size
     # Draw detected dots
     for i in range(len(detected_dots)):
         outer_circle = plt.Circle((detected_dots[i, 1], detected_dots[i, 0]), 
-                                 detected_dots[i, 2], fill=True, color='red', alpha=0.7)
+                                 detected_dots[i, 2], fill=True, color='red', alpha=0.9)
         inner_circle = plt.Circle((detected_dots[i, 1], detected_dots[i, 0]), 
                                  detected_dots[i, 2] / 2, fill=True, color='black', alpha=0.9)
         axes.add_artist(outer_circle)
@@ -102,7 +102,7 @@ def visualize_results(image, detected_dots, dice_centers, dice_values, dice_size
         # Add text with dice values and sizes
         text_y_position = 30
         for i in range(len(dice_centers)):
-            text = f"Dice {i+1}: Value={dice_values[i]}, Size={dice_sizes[i]:.1f}px"
+            text = f"Dice {i+1}: Value={dice_values[i]}"
             plt.text(20, text_y_position, text, fontsize=12, 
                     bbox=dict(facecolor='white', alpha=0.8, edgecolor='black'))
             text_y_position += 40
